@@ -1,16 +1,33 @@
-# React + Vite
+# AI Property Valuation System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sophisticated, full-stack web application designed to predict real estate prices using machine learning. This system offers users a premium, interactive interface to input property features and instantly receive a market value estimate, accompanied by confidence scores and a breakdown of the key factors driving the valuation.
 
-Currently, two official plugins are available:
+## 🌟 Features
+*   **Machine Learning Backend:** Powered by an XGBoost model built with Scikit-Learn pipelines, ensuring highly accurate and robust price predictions based on a rich dataset.
+*   **Interactive Analytics:** Features dynamic charts that visually break down the "Market Drivers" (Feature Importance), helping users understand exactly which attributes (e.g., Province, District, Has Garden) influence their property's value.
+*   **Premium Glassmorphism UI:** A sleek, modern, and fully responsive frontend built with React and Framer Motion. It includes a stunning, interactive 3D background powered by Three.js and `@react-three/fiber`.
+*   **Advanced Configuration:** Users can toggle "Advanced Settings" to fine-tune their predictions by entering specific details like Property Age, Distance to Colombo, Parking Spaces, and more.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack
+*   **Frontend:** React.js, Vite, Framer Motion (for animations), Three.js / React Three Fiber (for 3D models), Recharts (for analytics).
+*   **Backend:** Python, FastAPI, Pandas, Scikit-Learn, XGBoost.
 
-## React Compiler
+## 🚀 How to Run Locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Start the Backend (FastAPI)
+```bash
+cd backend
+# Activate your virtual environment (Windows)
+.\venv\Scripts\activate
+# Start the server
+uvicorn app:app --reload
+```
+*The backend server will run on `http://127.0.0.1:8000`*
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Start the Frontend (React/Vite)
+Open a new terminal window:
+```bash
+cd frontend
+npm run dev
+```
+*The frontend application will be available at `http://localhost:5173`*
